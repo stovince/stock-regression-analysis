@@ -1,7 +1,7 @@
 # stock-regression-analysis
 A project built in Python for fetching, processing and analyzing historical stock data with the help of regression. This project leverages pandas, NumPy, matplotlib and scikit-learn to create, evaluate and visualize predictive models.
 
-Installation:
+## Installation:
 1. Cloning repo
   git clone https://github.com/stovince/stock-regression-analysis.git
   cd stock-regression-analysis

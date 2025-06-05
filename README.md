@@ -8,6 +8,6 @@ Installation:
 2. Create virtual environment
   python3 -m venv venv
   For mac: source venv/bin/activate      
-  For windwows: venv\Scripts\activate
+  For windows: venv\Scripts\activate
 3. Install dependencies
    pip install -r requirements.txt

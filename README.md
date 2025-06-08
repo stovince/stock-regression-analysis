@@ -13,7 +13,7 @@ A project built in Python for fetching, processing and analyzing historical stoc
    pip install -r requirements.txt
 
 ## Experiments & Results
-# Simple LR on MA_20
+Simple LR on MA_20
 25/06/08
-R^2 = 0.00245, MSE = 0.000512, Coef = -7.39
+R^2 = 0.00245, MSE = 0.000512, Coef = -7.39 n/
 Short summary: No signal, prediction is flat at 0.

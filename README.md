@@ -5,9 +5,8 @@ A project built in Python for fetching, processing and analyzing historical stoc
 
 ## Main Objectives
 - Prediction of future stock movement by using historical data.
-- Comparison of different regressionmodels (linear, Ridge, RandomForest, etc.)
-- Learning 
-
+- Comparison of different regression-models (linear, Ridge, RandomForest, etc.)
+- Learn to utilize and leverage regression for analysis.
 
 ## Installation:
 1. Cloning repo

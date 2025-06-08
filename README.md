@@ -1,8 +1,13 @@
 # stock-regression-analysis
 
-## 🚀 Project oversight
+## 🚀 Project Oversight
 A project built in Python for fetching, processing and analyzing historical stock data with the help of regression. This project leverages pandas, NumPy, matplotlib and scikit-learn to create, evaluate and visualize predictive models.
+
+# Main Objectives
+- Prediction of future stock movement by using historical data.
 - Comparison of different regressionmodels (linear, Ridge, RandomForest, etc.)
+- Learning 
+
 
 ## Installation:
 1. Cloning repo
@@ -16,7 +21,12 @@ A project built in Python for fetching, processing and analyzing historical stoc
    pip install -r requirements.txt
 
 ## Experiments & Results
-Simple LR on MA_20
+- Simple LR on MA_20
 25/06/08
 R^2 = 0.00245, MSE = 0.000512, Coef = -7.39 
-Short summary: No signal, prediction is flat at 0.
+No signal, prediction is flat at 0.
+
+- RandomForest on MA_5, MA_10 and MA_20
+25/06/08
+R^2 = 0.32, MSE = 0.00034
+Promising results, check for overfitting still required.

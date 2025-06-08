@@ -26,10 +26,7 @@ def train_simple_lr(df, feature, target="LogReturn"):
     return model, metrics, (X_test, y_test, y_pred)
 
 def train_multivariate(df, features, target="LogReturn", model_type="ridge"):
-    """
-    Tränar en multivariat modell (ridge eller random forest) på features.
-    - model_type = "ridge" eller "rf"
-    """
+    "Tränar en multivariat modell (ridge eller random forest) på features. - model_type = "ridge" eller "rf""
     X = df[features].values
     y = df[target].values
     split = int(len(df) * 0.8)

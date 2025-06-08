@@ -3,7 +3,7 @@
 ## 🚀 Project Oversight
 A project built in Python for fetching, processing and analyzing historical stock data with the help of regression. This project leverages pandas, NumPy, matplotlib and scikit-learn to create, evaluate and visualize predictive models.
 
-# Main Objectives
+## Main Objectives
 - Prediction of future stock movement by using historical data.
 - Comparison of different regressionmodels (linear, Ridge, RandomForest, etc.)
 - Learning 

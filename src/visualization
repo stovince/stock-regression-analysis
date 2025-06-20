@@ -1,1 +1,72 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import argparse
+import os
+
+# Om du kör från projektets rot: importera direkt från samma mapp
+from modeling import train_simple_lr  
+
+def plot_predictions(dates, y_true, y_pred, title="Prediction vs Actual"):
+    "Plottar faktiska och predicerade log-returns över tid."
+    plt.figure(figsize=(12, 6))
+    plt.plot(dates, y_true, label="Faktiskt", linewidth=1)
+    plt.plot(dates, y_pred, label="Predicerat", alpha=0.7, linewidth=1)
+    plt.legend()
+    plt.title(title)
+    plt.xlabel("Datum")
+    plt.ylabel("LogReturn")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+
+def main():
+    "Läser in data, tränar enkel regression och plottar resultat."
+    parser = argparse.ArgumentParser(
+        description="Plotta prediktioner vs. faktiska log-returns med enkel linjär regression"
+    )
+    parser.add_argument(
+        "--input", required=True,
+        help="Sökväg till CSV med features (t.ex. data/processed/AAPL_features.csv)"
+    )
+    parser.add_argument(
+        "--feature", required=True,
+        help="Feature-kolumn att använda (t.ex. MA_20)"
+    )
+    parser.add_argument(
+        "--output_image", default=None,
+        help="(Valfritt) Spara plot som fil, t.ex. reports/pred.png"
+    )
+    args = parser.parse_args()
+
+    # Läs in och rensa data
+    df = (
+        pd.read_csv(args.input, parse_dates=["Date"])
+          .dropna()
+          .reset_index(drop=True)
+    )
+
+    # Träna modell och hämta test-prediktioner
+    # train_simple_lr returnerar: model, metrics_dict, (X_test, y_test, y_pred)
+    model, metrics, (X_test, y_true, y_pred) = train_simple_lr(df, args.feature)
+
+    # Skriv ut metrics
+    print("Metrics:")
+    for k, v in metrics.items():
+        print(f"  {k}: {v}")
+
+    # Plotta faktiska vs. predicerade värden
+    dates_test = df["Date"].iloc[len(df) - len(y_true):].values
+    plot_predictions(dates_test, y_true, y_pred,
+                     title=f"{args.feature}: Prediction vs Actual")
+
+    # Visa plot
+    plt.show()
+
+    # Spara bild om flaggan är satt
+    if args.output_image:
+        os.makedirs(os.path.dirname(args.output_image), exist_ok=True)
+        plt.savefig(args.output_image)
+        print(f"Plot sparad som {args.output_image}")
+
+if __name__ == "__main__":
+    main()
 

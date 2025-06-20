@@ -8,7 +8,8 @@ A project built in Python for fetching, processing and analyzing historical stoc
 - Comparison of different regression-models (linear, Ridge, RandomForest, etc.)
 - Learn to utilize and leverage regression for analysis.
 
-![image](https://github.com/user-attachments/assets/007bf078-5fc0-4cfc-b184-10a20ed45a63)
+![image](https://github.com/user-attachments/assets/ae1c0dff-a6c2-4f00-a4bf-31886388e5a2)
+
 
 ## Explanation
 This project performs a regression-based analysis of stock performance over a defined historical period. The main objective is to explore whether a linear relationship can be identified between time and Apple’s stock price, using statistical modeling to capture underlying trends in its historical development.

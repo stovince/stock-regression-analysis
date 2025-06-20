@@ -8,6 +8,8 @@ A project built in Python for fetching, processing and analyzing historical stoc
 - Comparison of different regression-models (linear, Ridge, RandomForest, etc.)
 - Learn to utilize and leverage regression for analysis.
 
+![image](https://github.com/user-attachments/assets/007bf078-5fc0-4cfc-b184-10a20ed45a63)
+
 ## Explanation
 This project performs a regression-based analysis of stock performance over a defined historical period. The main objective is to explore whether a linear relationship can be identified between time and Apple’s stock price, using statistical modeling to capture underlying trends in its historical development.
 Historical stock price data for Apple is retrieved, cleaned, and structured to ensure consistency. The project focuses on modeling the relationship between the stock’s price and time by transforming the time variable into a numerical format suitable for regression analysis. In this context, time serves as the independent variable, and the adjusted closing price of Apple acts as the dependent variable.
